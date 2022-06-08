@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <title>죄수의 딜레마</title>-->
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>KMU의료정보학교실-죄수의딜레마</title>
+
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="static/css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-lg-5">
+                <a class="navbar-brand" href="/">의료정보학교실</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login">login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="logout">log out</a></li>
+                        <li class="nav-item"><a class="nav-link" href="score">Score</a></li>
+                    </ul>
+                </div>
+            </div>
+    </nav>
+    <div class = 'page-header'>
+        <h1><br>** 죄수의 딜레마 **</h1>
+        <p>설명<br>~~~</p>
+        <br><br>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <form action="/choose_team" method="GET">
+        <script>
+            window.onload = function(){
+                    const btn = document.querySelector('#btn_link');
+                    btn.onclick = function(e){
+                        document.querySelector(".disableLink").removeAttribute('href');
+                    }
+                }
+        </script>
+        <a class="btn btn-secondary" href={{url_for('subgame', vsteam='master')}} > Master</a>
+        <a class="btn btn-outline-primary" href={{url_for('subgame', vsteam="team1" )}} > Team1</a>
+        <a class="btn btn-outline-secondary" href={{url_for('subgame', vsteam="team2" )}}  > Team2</a>
+        <a class="btn btn-outline-success" href={{url_for('subgame', vsteam="team3" )}}  > Team3</a>
+        <a class="btn btn-outline-danger" href={{url_for('subgame', vsteam="team4" )}}  > Team4</a>
+        <a class="btn btn-outline-warning" href={{url_for('subgame', vsteam="team5" )}}  > Team5</a>
+        <a class="btn btn-outline-info" href={{url_for('subgame', vsteam="team6" )}}  > Team6</a>
+        <a class="btn btn-outline-success" href={{url_for('subgame', vsteam="team7" )}}  > Team7</a>
+        <a class="btn btn-outline-dark" href={{url_for('subgame', vsteam="team8" )}}  > Team8</a>
+        <a class="btn btn-outline-primary" href={{url_for('subgame', vsteam="team9" )}}  > Team9</a>
+        <a class="btn btn-outline-secondary" href={{url_for('subgame', vsteam="team10" )}}  > Team10</a>
+        <a class="btn btn-outline-danger" href={{url_for('subgame', vsteam="team11" )}}  > Team11</a>
+        <a class="btn btn-outline-warning" href={{url_for('subgame', vsteam="team12" )}}  > Team12</a>
+        <a class="btn btn-outline-info" href={{url_for('subgame', vsteam="team13" )}}  > Team13</a>
+        <a class="btn btn-outline-dark" href={{url_for('subgame', vsteam="team14" )}}  > Team14</a>
+        <a class="btn btn-outline-success" href={{url_for('subgame', vsteam="team15" )}}  > Team15</a>
+
+    </form>
+
+<!--<a class="btn btn-primary btn-lg" href="game1">Click</a>-->
+<!--    <button type="button" class="btn btn-link">Link</button>-->
+
+<!--    <form action='/choose',method="GET">-->
+<!--        <input type="radio", name="conf_or_deny", value="conf",onclick='get_event'> 자백한다-->
+<!--        <input type="radio", name="conf_or_deny", value="deny",onclick='get_event'> 부인한다-->
+<!--        <input type="submit">-->
+<!--    </form>-->
+
+<!--    <script>function getValue() {-->
+<!--      const genderNodeList-->
+<!--      = document.getElementsByName('conf_or_deny');-->
+
+<!--      genderNodeList.forEach((node) => {-->
+<!--        if(node.checked)  {-->
+<!--          document.getElementById('result').innerText-->
+<!--            = node.value;-->
+<!--            }-->
+<!--        })-->
+<!--     }-->
+<!--    </script>-->
+<!--    <div id="result"></div>-->
+</body>
+</html>
